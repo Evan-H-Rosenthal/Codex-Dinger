@@ -1,0 +1,10 @@
+# Personal/downloaded audio is not licensed for redistribution.
+/konbini_chime.mp3
+/plugins/codex-dinger/assets/konbini_chime.mp3
+
+# Local runtime and editor artifacts
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/

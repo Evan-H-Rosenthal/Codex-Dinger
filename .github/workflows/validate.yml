@@ -1,0 +1,31 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check PowerShell and JSON syntax
+        shell: powershell
+        run: |
+          $failures = @()
+          Get-ChildItem -Recurse -Filter '*.ps1' | ForEach-Object {
+            $tokens = $null
+            $errors = $null
+            [void][Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$tokens, [ref]$errors)
+            $failures += $errors
+          }
+          if ($failures.Count -gt 0) { $failures | Format-List; exit 1 }
+          Get-ChildItem -Recurse -Filter '*.json' | ForEach-Object {
+            Get-Content -Raw $_.FullName | ConvertFrom-Json | Out-Null
+          }
+      - name: Run tests
+        shell: powershell
+        run: .\tests\run-tests.ps1

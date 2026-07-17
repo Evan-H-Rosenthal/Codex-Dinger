@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -ExecutionPolicy Bypass -File \"${PLUGIN_ROOT}/scripts/stop-hook.ps1\"",
+            "commandWindows": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"${PLUGIN_ROOT}\\scripts\\stop-hook.ps1\"",
+            "timeout": 30,
+            "statusMessage": "Playing Codex Dinger"
+          }
+        ]
+      }
+    ]
+  }
+}

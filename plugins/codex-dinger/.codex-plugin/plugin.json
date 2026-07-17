@@ -1,0 +1,37 @@
+{
+    "name":  "codex-dinger",
+    "version":  "0.1.0",
+    "description":  "Play a configurable sound when the main Codex task stops.",
+    "author":  {
+                   "name":  "Evan Rosenthal",
+                   "url":  "https://github.com/Evan-H-Rosenthal"
+               },
+    "homepage":  "https://github.com/Evan-H-Rosenthal/Codex-Dinger",
+    "repository":  "https://github.com/Evan-H-Rosenthal/Codex-Dinger",
+    "license":  "MIT",
+    "keywords":  [
+                     "codex",
+                     "notification",
+                     "sound",
+                     "hook",
+                     "windows"
+                 ],
+    "skills":  "./skills/",
+    "interface":  {
+                      "displayName":  "Codex Dinger",
+                      "shortDescription":  "A chime when your Codex task is done.",
+                      "longDescription":  "Codex Dinger plays a configurable notification sound when the main Codex task reaches its Stop hook. It includes a sound bank and volume controls.",
+                      "developerName":  "Evan Rosenthal",
+                      "category":  "Productivity",
+                      "capabilities":  [
+                                           "Hooks",
+                                           "Sound bank"
+                                       ],
+                      "defaultPrompt":  [
+                                            "List my Codex Dinger sounds.",
+                                            "Add the attached sound to my sound bank.",
+                                            "Set my Codex Dinger volume to 50 percent."
+                                        ],
+                      "websiteURL":  "https://github.com/Evan-H-Rosenthal/Codex-Dinger"
+                  }
+}

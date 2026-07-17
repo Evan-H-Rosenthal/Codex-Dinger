@@ -1,0 +1,20 @@
+{
+    "name":  "codex-dinger",
+    "interface":  {
+                      "displayName":  "Codex Dinger"
+                  },
+    "plugins":  [
+                    {
+                        "name":  "codex-dinger",
+                        "source":  {
+                                       "source":  "local",
+                                       "path":  "./plugins/codex-dinger"
+                                   },
+                        "policy":  {
+                                       "installation":  "AVAILABLE",
+                                       "authentication":  "ON_INSTALL"
+                                   },
+                        "category":  "Productivity"
+                    }
+                ]
+}

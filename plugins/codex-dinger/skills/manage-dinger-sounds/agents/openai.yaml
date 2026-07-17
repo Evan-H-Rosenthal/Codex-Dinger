@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Dinger Sounds"
+  short_description: "Manage Codex Dinger sounds and settings"
+  default_prompt: "List my Codex Dinger sounds and current settings."
