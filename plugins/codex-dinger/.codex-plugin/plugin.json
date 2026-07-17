@@ -1,6 +1,6 @@
 {
     "name":  "codex-dinger",
-    "version":  "0.1.0",
+    "version":  "0.2.0",
     "description":  "Play a configurable sound when the main Codex task stops.",
     "author":  {
                    "name":  "Evan Rosenthal",

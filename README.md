@@ -2,7 +2,7 @@
 
 Codex Dinger plays a small sound when your **main Codex task** finishes. It uses Codex's `Stop` hook, so subagents, forks, primers, and intermediate activity do not produce false chimes.
 
-Windows and PowerShell 5.1 are currently supported. The plugin has no network access, credentials, or telemetry.
+Windows and PowerShell 5.1 are currently supported. The completion hook has no network access, credentials, or telemetry. Network access is used only when the user explicitly checks for updates.
 
 ## Install
 
@@ -22,15 +22,23 @@ Ask Codex naturally:
 - "Use `my-chime.mp3` for Codex Dinger."
 - "Set Codex Dinger volume to 40 percent."
 - "Disable Codex Dinger."
+- "Check Codex Dinger for updates."
+- "Update Codex Dinger."
 
 Custom `.wav`, `.mp3`, `.wma`, and `.m4a` files up to 25 MB are copied to `%LOCALAPPDATA%\CodexDinger\sounds`. Preferences live in `%LOCALAPPDATA%\CodexDinger\settings.json`, so upgrades do not erase them.
 
 ## Update or uninstall
 
+Ask Codex to "check Codex Dinger for updates" or "update Codex Dinger." The bundled updater refreshes only the `codex-dinger` marketplace and reports the installed and available versions.
+
+The equivalent manual commands are:
+
 ```powershell
 codex plugin marketplace upgrade codex-dinger
 codex plugin add codex-dinger@codex-dinger
 ```
+
+Restart Codex after an update. Review the hook trust prompt again if the hook definition changed.
 
 ```powershell
 codex plugin remove codex-dinger@codex-dinger

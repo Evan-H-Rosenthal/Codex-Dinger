@@ -1,0 +1,4 @@
+interface:
+  display_name: "Update Codex Dinger"
+  short_description: "Check for and install Codex Dinger updates"
+  default_prompt: "Check Codex Dinger for updates."

@@ -30,3 +30,5 @@ finally {
     Remove-Item Env:CODEX_DINGER_DATA -ErrorAction SilentlyContinue
     if (Test-Path -LiteralPath $testRoot) { Remove-Item -LiteralPath $testRoot -Recurse -Force }
 }
+
+& (Join-Path $PSScriptRoot 'update-tests.ps1')
